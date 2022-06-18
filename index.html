@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="formContainer">
+        <form onsubmit="ergebnis(event)">
+            <!-- Netto zu Brutto / Bruto zu Netto -->
+            <p>Was soll berechnet werden?</p>
+            <div class="netToBrut">
+                <input type="radio" id="nettoBrutto" name="nB" value="0">
+                <label for="nettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+            </div>
+            <div class="brutToNet">
+                <input type="radio" id="bruttoNetto" name="nB" value="1">
+                <label for="nettoBrutto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            </div>
+            <!-- Steuersatz 19% oder 7% -->
+            <p>Mehrwertsteuersatz</p>
+            <input type="radio" id="steuer19" name="steuerSatz" value="19">
+            <label for="steuer7">19%</label>
+            <input type="radio" id="steuer7" name="steuerSatz" value="7">
+            <label for="steuer7">7%</label>
+            <!-- Nettobetrag Bruttobetrag -->
+            <div class="betrag">
+                <label for="lohn" id="nettoBruttoInput"></label>
+                <input type="number" id="income" placeholder="z.B 2500,00">
+                <input type="submit" id="berechnen" value="BERECHNEN">
+            </div>
+        </form>
+        <!-- Ergebnis -->
+        <div class="ergebnis">
+            <p>Ergebnis</p>
+            <div>
+                <p>Mehrwertsteuerbetrag</p>
+                <p id="mwsbetrag"></p>
+            </div>
+            <div>
+                <p id="endpreis"></p>
+                <p id="bruttoBetrag"></p>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

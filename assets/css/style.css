@@ -1,0 +1,11 @@
+.betrag input {
+    display: block;
+}
+
+.betrag {
+    margin-top: 10px;
+}
+
+#income {
+    margin: 10px 0;
+}
